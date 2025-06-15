@@ -1,0 +1,133 @@
+site:
+  company:
+    name: "株式会社MARI＆KEN"
+    representative: "佐藤 賢治"
+    address: "〒144-0051 東京都大田区西蒲田7-4-4-6F"
+    tel: "03-6320-2240"
+    fax: "03-6320-2240"
+    hours: "9:00～17:00"
+    domain: "独自ドメイン取得予定"
+    sns:
+      linkedin: true
+      line: true
+      x: true
+    mission: "共創・共存・共栄　人類の幸せに貢献する。"
+    vision: "ヒートポンプ発電機で世界発電シェア50％を目指す"
+    industry: "電気製品製造業"
+
+  pages:
+    - name: "トップページ"
+      path: "/"
+      sections:
+        - type: "hero"
+          title: "世界初の技術で、未来の発電を変える"
+          visual: "ソーラーヒートポンプ装置のイメージCG"
+          cta:
+            - "技術を見る"
+            - "製品一覧"
+            - "パートナー募集"
+            - "代表メッセージ"
+        - type: "highlight"
+          content: "注目技術紹介スライド（動画またはGIF）"
+
+    - name: "会社情報"
+      path: "/about"
+      sections:
+        - type: "profile"
+          content:
+            - "社名：株式会社MARI＆KEN"
+            - "代表：佐藤 賢治"
+            - "所在地：東京都大田区西蒲田7-4-4-6F"
+            - "TEL/FAX：03-6320-2240（9:00～17:00）"
+        - type: "philosophy"
+          content:
+            - "理念：共創・共存・共栄"
+            - "ビジョン：温暖化防止と世界発電シェア50％の実現"
+        - type: "message"
+          content: "過去の経緯（平成電電・服役）を開示し、再挑戦への想いを誠実に語る"
+        - type: "biography"
+          content: "高校・大学・起業までの経歴を時系列で掲載"
+
+    - name: "製品・サービス"
+      path: "/products"
+      sections:
+        - type: "main_technology"
+          items:
+            - "速度エネルギー抽出熱交換器"
+            - "ソーラーヒートポンプエンジン発電機"
+            - "技術支援・導入コンサル"
+        - type: "use_cases"
+          content:
+            - "データセンター・オフィスビル・食品スーパーへの導入事例"
+            - "冷却→発電→ゼロエミッションのステップ解説"
+        - type: "price"
+          content: "発電装置価格：500,000円／kW"
+
+    - name: "技術情報"
+      path: "/technology"
+      sections:
+        - type: "principle"
+          content:
+            - "熱力学・体積変化・速度エネルギー抽出の理論"
+            - "COP・潜熱との関係"
+        - type: "data"
+          content:
+            - "技術表（表1など）や数式を図付きで掲載"
+        - type: "patents"
+          content: "特許出願済み／実験データあり（例：2P理論）"
+
+    - name: "パートナー募集"
+      path: "/partners"
+      sections:
+        - type: "recruitment"
+          items:
+            - "冷凍サイクル設備工事会社"
+            - "販売代理店"
+            - "技術開発パートナー"
+        - type: "cta"
+          content: "興味のある方はこちらからお問い合わせ"
+
+    - name: "採用情報"
+      path: "/recruit"
+      sections:
+        - type: "job_openings"
+          positions:
+            - "IT技術者"
+            - "財務・会計経験者"
+            - "冷凍サイクル技術者"
+        - type: "apply"
+          method: "応募フォームまたはメールで受付"
+
+    - name: "お問い合わせ"
+      path: "/contact"
+      sections:
+        - type: "form"
+          fields: ["氏名", "メール", "電話番号", "問い合わせ内容"]
+        - type: "contact_info"
+          content: "TEL/FAX/メール掲載"
+        - type: "sns"
+          content: "LinkedInなどへのリンク設置"
+
+    - name: "フッター"
+      path: "/footer"
+      sections:
+        - type: "footer_links"
+          items:
+            - "会社情報"
+            - "サイトマップ"
+            - "利用規約"
+            - "プライバシーポリシー"
+
+  design:
+    color_scheme: "ネイビーブルー × ホワイト"
+    font: "ゴシック体（可読性重視）"
+    tone: "誠実・技術的・チャレンジング"
+    elements:
+      - "イラスト・図解（熱サイクルなど）"
+      - "導線リンク（ページ内・外）"
+      - "アクセシビリティ配慮（大きめ文字など）"
+
+  suggestions:
+    - "トップに動画スライドやGIFアニメを配置して印象づけ"
+    - "ストーリーセクション「私たちの過去と未来」で信頼性強化"
+    - "複雑な技術は『5分で分かる〇〇』コーナーで図解化"
