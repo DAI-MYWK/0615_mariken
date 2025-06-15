@@ -21,8 +21,15 @@ navLinks.forEach((link) => {
 // Smooth scrolling for navigation links
 navLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
-    e.preventDefault();
     const targetId = link.getAttribute("href");
+
+    // 下層ページへのリンク（.htmlファイル）の場合は通常の遷移を許可
+    if (targetId.includes(".html")) {
+      return; // デフォルトの動作（ページ遷移）を許可
+    }
+
+    // アンカーリンクの場合のみスムーススクロールを適用
+    e.preventDefault();
     const targetElement = document.querySelector(targetId);
 
     if (targetElement) {
@@ -350,4 +357,27 @@ document.querySelector(".scroll-indicator")?.addEventListener("click", () => {
   if (technologySection) {
     technologySection.scrollIntoView({ behavior: "smooth" });
   }
+});
+
+// Tab functionality for products page
+document.addEventListener("DOMContentLoaded", function () {
+  const tabButtons = document.querySelectorAll(".tab-button");
+  const tabContents = document.querySelectorAll(".tab-content");
+
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const targetTab = button.getAttribute("data-tab");
+
+      // Remove active class from all buttons and contents
+      tabButtons.forEach((btn) => btn.classList.remove("active"));
+      tabContents.forEach((content) => content.classList.remove("active"));
+
+      // Add active class to clicked button and corresponding content
+      button.classList.add("active");
+      const targetContent = document.getElementById(targetTab);
+      if (targetContent) {
+        targetContent.classList.add("active");
+      }
+    });
+  });
 });

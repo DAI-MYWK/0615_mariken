@@ -325,6 +325,14 @@ section {
     padding: 5rem 0;
 }
 
+/* Section CTA */
+.section-cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 107, 53, 0.2);
+}
+
 .section-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -404,8 +412,6 @@ section {
 .tech-card.animate-bar::before {
     left: 150%;
 }
-
-
 
 .tech-card:hover {
     transform: translateY(-8px) scale(1.02);
@@ -531,6 +537,28 @@ section {
     transition: all 0.4s ease;
     border: 1px solid rgba(255, 107, 53, 0.2);
     position: relative;
+}
+
+/* 画像がある製品カードの背景を白に */
+.product-card.has-image {
+    background: white;
+    border: 1px solid rgba(255, 107, 53, 0.3);
+}
+
+.product-card.has-image .product-content {
+    background: white;
+}
+
+.product-card.has-image .product-content h3 {
+    color: var(--accent-orange);
+}
+
+.product-card.has-image .product-content p {
+    color: #666;
+}
+
+.product-card.has-image .product-features li {
+    color: #333;
 }
 
 .product-card::before {
@@ -1210,7 +1238,7 @@ section {
 }
 
 .contact-form {
-    background: rgba(26, 26, 26, 0.8);
+    background: white;
     padding: 2rem;
     border-radius: 15px;
     border: 1px solid rgba(255, 107, 53, 0.3);
@@ -1222,7 +1250,7 @@ section {
 
 .form-group label {
     display: block;
-    color: var(--text-white);
+    color: #333;
     font-weight: 500;
     margin-bottom: 0.5rem;
 }
@@ -1235,10 +1263,10 @@ section {
 .form-group textarea {
     width: 100%;
     padding: 1rem;
-    background: rgba(26, 26, 26, 0.8);
+    background: white;
     border: 1px solid rgba(255, 107, 53, 0.3);
     border-radius: 8px;
-    color: var(--text-white);
+    color: #333;
     font-family: var(--font-main);
     transition: border-color 0.3s ease;
 }
@@ -1254,14 +1282,16 @@ section {
     background: var(--gradient-heat);
     color: var(--text-white);
     border: none;
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
     border-radius: 50px;
     font-weight: 700;
     font-size: 1.1rem;
     cursor: pointer;
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
+    width: 100%;
     transition: all 0.3s ease;
 }
 
@@ -1275,7 +1305,7 @@ section {
 }
 
 .contact-info {
-    background: rgba(26, 26, 26, 0.8);
+    background: white;
     padding: 2rem;
     border-radius: 15px;
     border: 1px solid rgba(255, 107, 53, 0.3);
@@ -1297,12 +1327,12 @@ section {
 }
 
 .contact-label {
-    color: var(--text-gray);
+    color: #333;
     font-weight: 500;
 }
 
 .contact-value {
-    color: var(--text-white);
+    color: #333;
     font-weight: 500;
 }
 
@@ -1321,7 +1351,7 @@ section {
 }
 
 .sns-link {
-    color: var(--text-gray);
+    color: #333;
     text-decoration: none;
     padding: 0.5rem 1rem;
     border: 1px solid rgba(255, 107, 53, 0.3);
@@ -1556,5 +1586,670 @@ section {
 
     .container {
         padding: 0 15px;
+    }
+}
+
+/* Page Header */
+.page-header {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.page-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Company Details */
+.company-details {
+    padding: 4rem 0;
+    background: rgba(26, 26, 26, 0.85);
+}
+
+.company-info-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.company-overview h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    margin-bottom: 2rem;
+}
+
+.info-table {
+    background: rgba(255, 107, 53, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 107, 53, 0.3);
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 107, 53, 0.2);
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 600;
+    color: var(--text-gray);
+    min-width: 120px;
+}
+
+.info-value {
+    color: var(--text-white);
+    font-weight: 500;
+}
+
+.company-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.company-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-glow);
+}
+
+/* Philosophy Section */
+.philosophy {
+    padding: 4rem 0;
+    background: rgba(10, 10, 10, 0.9);
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.philosophy-item {
+    background: rgba(255, 107, 53, 0.1);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    text-align: center;
+}
+
+.philosophy-item h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    margin-bottom: 1.5rem;
+}
+
+.philosophy-item p {
+    color: var(--text-white);
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* Business Overview */
+.business-overview {
+    padding: 4rem 0;
+    background: rgba(26, 26, 26, 0.85);
+}
+
+.business-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.business-card {
+    background: rgba(255, 107, 53, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.business-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+}
+
+.business-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.business-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    margin-bottom: 0.5rem;
+}
+
+.business-card p {
+    color: var(--text-gray);
+    font-size: 1rem;
+}
+
+/* CEO Message */
+.ceo-message {
+    padding: 4rem 0;
+    background: rgba(10, 10, 10, 0.9);
+}
+
+.ceo-message-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.message-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.message-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-glow);
+}
+
+.ceo-message-text {
+    background: rgba(255, 107, 53, 0.1);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 107, 53, 0.3);
+}
+
+.ceo-message-text p {
+    color: var(--text-white);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.ceo-message-text a {
+    color: var(--accent-orange);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-orange);
+    transition: all 0.3s ease;
+}
+
+.ceo-message-text a:hover {
+    background: var(--accent-orange);
+    color: var(--text-white);
+    padding: 2px 4px;
+}
+
+/* CEO Profile */
+.ceo-profile {
+    padding: 4rem 0;
+    background: rgba(26, 26, 26, 0.85);
+}
+
+.profile-content {
+    margin-top: 3rem;
+}
+
+.profile-content h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.career-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 107, 53, 0.2);
+    background: rgba(255, 107, 53, 0.05);
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+}
+
+.year {
+    font-weight: 700;
+    color: var(--accent-orange);
+    min-width: 100px;
+    margin-right: 2rem;
+}
+
+.event {
+    color: var(--text-white);
+    flex: 1;
+}
+
+/* Contact CTA */
+.contact-cta {
+    padding: 4rem 0;
+    background: white;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Active Navigation Link */
+.nav-link.active {
+    color: var(--accent-orange);
+    border-bottom: 2px solid var(--accent-orange);
+}
+
+/* Logo Link */
+.nav-logo a {
+    text-decoration: none;
+}
+
+/* Responsive Design for Company Page */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .company-info-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .business-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ceo-message-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .year {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .philosophy-item,
+    .ceo-message-text {
+        padding: 1.5rem;
+    }
+    
+    .info-table {
+        padding: 1.5rem;
+    }
+}
+
+/* Product Detail Sections */
+.product-detail-section {
+    padding: 4rem 0;
+    background: rgba(26, 26, 26, 0.85);
+}
+
+.product-detail-section.alt-bg {
+    background: rgba(10, 10, 10, 0.9);
+}
+
+.product-detail-content {
+    margin-top: 3rem;
+}
+
+.product-description {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.product-description p {
+    font-size: 1.1rem;
+    color: var(--text-white);
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 製品詳細セクションが白背景の場合の文字色調整 */
+.product-detail-section .product-description p {
+    color: var(--text-white);
+}
+
+.product-detail-section.alt-bg .product-description p {
+    color: var(--text-white);
+}
+
+.product-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.product-image-item {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.product-image-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+}
+
+.product-image-item img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.product-image-item h4 {
+    color: var(--accent-orange);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.tech-link {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.tech-link a {
+    color: var(--accent-orange);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-orange);
+    transition: all 0.3s ease;
+}
+
+.tech-link a:hover {
+    background: var(--accent-orange);
+    color: var(--text-white);
+    padding: 2px 4px;
+}
+
+/* Services Section */
+.services-section {
+    padding: 4rem 0;
+    background: rgba(26, 26, 26, 0.85);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: rgba(255, 107, 53, 0.1);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-consulting,
+.icon-system,
+.icon-cooling {
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-heat);
+    border-radius: 50%;
+    position: relative;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: var(--text-white);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Application Section */
+.application-section {
+    padding: 4rem 0;
+    background: rgba(10, 10, 10, 0.9);
+}
+
+.application-tabs {
+    margin-top: 3rem;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.tab-button {
+    padding: 1rem 2rem;
+    background: rgba(255, 107, 53, 0.1);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    border-radius: 25px;
+    color: var(--text-white);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover,
+.tab-button.active {
+    background: var(--accent-orange);
+    color: var(--text-white);
+    transform: translateY(-2px);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.application-content h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.step-card {
+    background: rgba(255, 107, 53, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 107, 53, 0.3);
+}
+
+.step-card h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.step-card ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.step-card li {
+    color: var(--text-white);
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.step-card li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: var(--accent-orange);
+}
+
+.step-card strong {
+    color: var(--accent-orange);
+}
+
+.effect-highlight {
+    background: rgba(255, 107, 53, 0.15);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-orange);
+}
+
+.effect-highlight p {
+    color: var(--text-white);
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.effect-highlight .result {
+    color: var(--accent-orange);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design for Products Page */
+@media (max-width: 768px) {
+    .product-images-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tab-button {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-image-item {
+        padding: 1rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    .step-card {
+        padding: 1.5rem;
+    }
+    
+    .step-card li {
+        font-size: 0.9rem;
     }
 } 
